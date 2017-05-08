@@ -315,7 +315,7 @@ class Generator
             }
             /* @codeCoverageIgnoreEnd */
 
-            if (PHP_INT_SIZE === 8) {
+            if (8 === PHP_INT_SIZE) {
                 // 64-bit versions
                 list($higher, $lower) = array_values(unpack('N2', $bytes));
                 $val = $higher << 32 | $lower;
